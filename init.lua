@@ -63,10 +63,10 @@ vim.opt.termguicolors = true
 
 
 -- --FLOATERMINAL KEYBINDS
--- vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { noremap = true })
--- local toggleTerminal = require("custom.floaterminal")
--- vim.api.nvim_create_user_command("Floaterminal", toggleTerminal, {})
--- vim.keymap.set({ "t", "n" }, "<Space>tr", toggleTerminal, { noremap = true })
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { noremap = true })
+local toggleTerminal = require("plugins.floaterminal")
+vim.api.nvim_create_user_command("Floaterminal", toggleTerminal, {})
+vim.keymap.set({ "t", "n" }, "<Space>tr", toggleTerminal, { noremap = true })
 
 
 --OIL
