@@ -36,4 +36,16 @@ vim.lsp.config("ts_ls", {
   },
 })
 
+vim.lsp.config("rust-analyzer", {
+  cmd = { "rust-analyzer" },
+  filetypes = { "rust" },
+  settings = {
+    ["rust-analyzer"] = {
+      diagnostics = {
+        enable = false,
+      },
+    },
+  },
+})
+
 vim.lsp.enable(servers)

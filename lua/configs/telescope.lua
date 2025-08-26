@@ -1,3 +1,4 @@
+local telescope = require('telescope')
 local builtin = require("telescope.builtin")
 -- Reset Telescope highlights to normal/transparent
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "NONE", fg = nil })
