@@ -1,5 +1,4 @@
 require("nvchad.configs.lspconfig").defaults()
-
 local servers = {
   "html",
   "cssls",
@@ -30,6 +29,7 @@ vim.lsp.config("clangd", {
 
 vim.lsp.config("ts_ls", {
   init_options = {
+    cmd = { "typescript-language-server", "--stdio" },
     preferences = {
       disableSuggestions = true,
     },

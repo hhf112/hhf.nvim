@@ -1,6 +1,4 @@
---simple tutorial 
-
-local mult = 0.7;
+local mult = 0.4;
 --store the state if opened once
 local state = {
   floating = {
@@ -14,11 +12,11 @@ local state = {
 local function hrszo_floating_window(opts)
   --dimensions and options
   opts = opts or {}
-  local width = opts.widht or math.floor(vim.o.columns * mult)
+  local width = opts.widht or math.floor(vim.o.columns)
   local height = opts.height or math.floor(vim.o.lines * mult)
 
   --anchored at center
-  local row = math.floor((vim.o.lines - height) / 2)
+  local row = math.floor(vim.o.lines - height)
   local col = math.floor((vim.o.columns - width) / 2)
 
   --no file, scratch buffer
