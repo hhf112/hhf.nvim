@@ -1,13 +1,13 @@
 require "nvchad.mappings"
 
--- MISCELLENOUS {
+-- miscellenous {
 vim.keymap.set("n", "<leader>e", function()
   vim.diagnostic.open_float(nil, { focus = false })
 end, { desc = "Show diagnostic popup" })
 -- }
 
---UTIL {
-  --FLOATERMINAL { 
+--util {
+  --floaterminal { 
   vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { noremap = true })
   local toggleTerminal = require "util.floaterminal"
   vim.api.nvim_create_user_command("Floaterminal", toggleTerminal, {})
@@ -15,7 +15,7 @@ end, { desc = "Show diagnostic popup" })
   -- }
 -- }
 
--- TELESCOPE {
+-- telescope {
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<space>fd", builtin.find_files)
 vim.keymap.set("n", "<space>fht", builtin.help_tags)
@@ -37,20 +37,20 @@ vim.keymap.set("n", "<space>fh",
 )
 --}
 
---OIL {
+--oil {
 vim.keymap.set("n", "<C-O>", function()
   vim.cmd "Oil"
   vim.api.nvim_feedkeys("_", "n", false) --directory of current buffer
 end, { noremap = true })
 -- }
 
--- COPILOT {
+-- copilot {
 -- restore literal <Esc> behavior in Insert and Select modes
 vim.keymap.set("i", "<Esc>", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set("s", "<Esc>", "<Esc>", { noremap = true, silent = true })
  -- }
 
--- TOGGLETERM {
+-- toggleterm {
 vim.keymap.set(
   { "n", "t" },
   "<leader>tv",
@@ -66,7 +66,7 @@ vim.keymap.set(
 )
  -- }
 
--- NVIM-DAP {
+-- nvim-dap {
 vim.keymap.set("n", ";", ":", { desc = "CMD enter command mode" })
 vim.keymap.set("i", "jk", "<ESC>")
 
