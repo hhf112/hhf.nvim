@@ -1,3 +1,5 @@
+-- these mappings are loaded on startup. Any lazy-loaded plugin mappings should not be included here.
+
 require "nvchad.mappings"
 
 -- miscellenous {
