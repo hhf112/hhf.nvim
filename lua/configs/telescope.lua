@@ -10,7 +10,7 @@ vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { bg = "NONE", fg = nil })
 require('telescope').setup {
   defaults = {
     file_ignore_patterns = {
-      "^./node_modules/",
+      "node_modules/.*",
     },
   },
   pickers = {

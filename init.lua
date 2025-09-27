@@ -34,3 +34,9 @@ require "autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- use for transparent background 
+-- vim.cmd [[
+--   highlight Normal guibg=NONE ctermbg=NONE
+--   highlight NormalNC guibg=NONE ctermbg=NONE
+-- ]]
