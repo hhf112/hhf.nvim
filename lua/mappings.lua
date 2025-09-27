@@ -2,6 +2,9 @@
 
 require "nvchad.mappings"
 
+-- d black hole
+-- vim.keymap.set({'n', 'v'}, 'd', '"_d', { noremap = true, silent = true })
+
 -- miscellenous {
 vim.keymap.set("n", "<leader>e", function()
   vim.diagnostic.open_float(nil, { focus = false })
@@ -10,9 +13,11 @@ end, { desc = "Show diagnostic popup" })
 
 --util {
   --floaterminal { 
+--terminal exit
   vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { noremap = true })
   local toggleTerminal = require "util.floaterminal"
   vim.api.nvim_create_user_command("Floaterminal", toggleTerminal, {})
+--terminal toggle
   vim.keymap.set({ "t", "n" }, "<Space>tr", toggleTerminal, { noremap = true })
   -- }
 -- }
@@ -56,14 +61,14 @@ vim.keymap.set("s", "<Esc>", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set(
   { "n", "t" },
   "<leader>tv",
-  "<cmd>ToggleTerm direction=vertical size=40<CR>",
+  "<cmd>ToggleTerm direction=vertical size=80<CR>",
   { desc = "Toggle vertical terminal (80 columns)" }
 )
 
 vim.keymap.set(
   "n",
   "<C-\\>",
-  "<>ToggleTerm size=40 dir=" .. vim.fn.getcwd() .. " direction=horizontal name=somethingelse",
+  "<cmd>ToggleTerm size=20 dir=" .. vim.fn.getcwd() .. " direction=horizontal name=somethingelse<CR>",
   { noremap = true, silent = true }
 )
  -- }

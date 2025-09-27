@@ -7,12 +7,30 @@ return {
 
   --dev {
   {
+    "akinsho/toggleterm.nvim",
+    lazy = false,
+    version = "*",
+    config = true,
+  },
+
+  {
     "themaxmarchuk/tailwindcss-colors.nvim",
     lazy = false,
   },
   --}
 
   --AI {
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    lazy = false,
+    dependencies = {
+      { "nvim-lua/plenary.nvim", branch = "master" },
+    },
+    build = "make tiktoken",
+    opts = {
+      -- See Configuration section for options
+    },
+  },
   {
     "supermaven-inc/supermaven-nvim",
     lazy = true,
@@ -27,7 +45,7 @@ return {
           suggestion_color = "#4c4c55",
           cterm = 244,
         },
-        ignore_filetypes = { cpp = true },
+        ignore_filetypes = { "cpp", "rust" },
         log_level = "info", -- set to "off" to disable logging completely
         disable_inline_completion = false, -- disables inline completion for use with cmp
         disable_keymaps = false, -- disables built in keymaps for more manual control
@@ -58,7 +76,11 @@ return {
     "stevearc/oil.nvim",
     ---@module 'oil'
     ---@jype oil.SetupOpts
-    opts = {},
+    opts = {
+      view_options = {
+        show_hidden = true,
+      },
+    },
     -- Optional dependencies
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
