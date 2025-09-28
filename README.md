@@ -1,1 +1,1 @@
-credits: Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+Stretch: None, opacity: 7%, Ottoson, Jetbrains Mono Nerd, font size: 8, padding: 9
